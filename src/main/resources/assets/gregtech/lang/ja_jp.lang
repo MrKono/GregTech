@@ -112,6 +112,7 @@ gregtech.waila.energy_stored=エネルギー: %d EU / %d EU
 gregtech.waila.progress_idle=停止中
 gregtech.waila.progress_tick=進捗: %d t / %d t
 gregtech.waila.progress_sec=進捗: %d s / %d s
+gregtech.waila.progress_computation=計算力: %s / %s
 
 gregtech.multiblock.title=マルチブロックの構造
 gregtech.multiblock.primitive_blast_furnace.bronze.description=初歩的な溶鉱炉(PBF)は序盤にスチールを得るためのマルチブロック機械です。 動作は遅いですが、最初の高圧蒸気機械を作るためのスチールを提供します。
@@ -4701,8 +4702,9 @@ gregtech.machine.active_transformer.routing=経路選択
 
 gregtech.machine.research_station.name=研究ステーション
 gregtech.machine.research_station.tooltip.1=単なるマルチブロックスキャナーではない
-gregtech.machine.research_station.tooltip.2=§fデータオーブ§7または§fデータモジュール§7へのスキャンに用いる。
+gregtech.machine.research_station.tooltip.2=§fデータオーブ§7と§fデータモジュール§7へのスキャンに用いる。
 gregtech.machine.research_station.tooltip.3=動作には§f計算力§7が必要です。
+gregtech.machine.research_station.tooltip.4=計算力をさらに与えると、より早くレシピを実行できる。
 gregtech.multiblock.research_station.description=研究ステーションはアセンブリライン用のより複雑な研究を行うマルチブロックです。研究にはデータオーブまたはデータモジュールが必要です。また、動作には高機能計算アレイ (HPCAs) から供給されるComputer Work Units (CWU/t)が必要です。
 
 gregtech.machine.network_switch.name=ネットワークスイッチ
@@ -5155,7 +5157,8 @@ gregtech.recipe.cleanroom=%sが必要
 gregtech.recipe.cleanroom.display_name=クリーンルーム
 gregtech.recipe.cleanroom_sterile.display_name=滅菌クリーンルーム
 gregtech.recipe.research=研究が必要
-gregtech.recipe.computation_per_tick=計算力: %,d CWU/t
+gregtech.recipe.computation_per_tick=最低計算力: %,d CWU/t
+gregtech.recipe.total_computation=計算力: %,d
 
 gregtech.fluid.click_to_fill=§7中身の入った液体容器でクリックすると、§b中身をタンクに移す§7。Shiftクリックで1スタック全て移す。
 gregtech.fluid.click_combined=§7液体容器でクリックすると、液体を§c液体容器§7と§b内部タンク§7間をやり取りできる。Shiftクリックで1スタック全て移す。
