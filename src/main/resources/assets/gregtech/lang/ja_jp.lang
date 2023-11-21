@@ -5208,6 +5208,9 @@ gregtech.tool_action.crowbar=§8バールでカバーを撤去できます。
 gregtech.tool_action.tape=§8テープでメンテナンスの問題を解決できます。
 
 gregtech.fluid.generic=%s
+gregtech.fluid.liquid_generic=液体%s
+gregtech.fluid.gas_generic=%sガス
+gregtech.fluid.gas_vapor=%s蒸気
 gregtech.fluid.plasma=%sプラズマ
 gregtech.fluid.empty=空
 gregtech.fluid.amount=§9量: %,d/%,d L
