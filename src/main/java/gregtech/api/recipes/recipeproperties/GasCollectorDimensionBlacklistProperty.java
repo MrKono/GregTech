@@ -8,25 +8,25 @@ import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 
-public class GasCollectorDimensionBlackListProperty extends RecipeProperty<IntList> {
+public class GasCollectorDimensionBlacklistProperty extends RecipeProperty<IntList> {
 
-    public static final String KEY = "dimensionBlackList";
+    public static final String KEY = "dimensionBlacklist";
 
-    private static GasCollectorDimensionBlackListProperty INSTANCE;
+    private static GasCollectorDimensionBlacklistProperty INSTANCE;
 
-    private GasCollectorDimensionBlackListProperty() {
+    private GasCollectorDimensionBlacklistProperty() {
         super(KEY, IntList.class);
     }
 
-    public static GasCollectorDimensionBlackListProperty getInstance() {
+    public static GasCollectorDimensionBlacklistProperty getInstance() {
         if (INSTANCE == null)
-            INSTANCE = new GasCollectorDimensionBlackListProperty();
+            INSTANCE = new GasCollectorDimensionBlacklistProperty();
         return INSTANCE;
     }
 
     @Override
     public void drawInfo(Minecraft minecraft, int x, int y, int color, Object value) {
-        minecraft.fontRenderer.drawString(I18n.format("gregtrch.recipe.dimensins.blacklist",
+        minecraft.fontRenderer.drawString(I18n.format("gregtech.recipe.dimensions.blacklisted",
                 getDimensionsForRecipe(castValue(value))), x, y, color);
     }
 

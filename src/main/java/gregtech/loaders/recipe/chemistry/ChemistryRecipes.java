@@ -90,21 +90,21 @@ public class ChemistryRecipes {
                 .output(Items.STRING, 32)
                 .duration(80).EUt(48).buildAndRegister();
 
-        GAS_COLLECTOR_RECIPES.recipeBuilder()
+        /*GAS_COLLECTOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
                 .fluidOutputs(Air.getFluid(10000))
                 .dimension(0)
-                .duration(200).EUt(16).buildAndRegister();
+                .duration(200).EUt(16).buildAndRegister();*/
 
-        /*
-        Same Recipe but use blacklist
+
+        //Same Recipe but use blacklist
         GAS_COLLECTOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
                 .fluidOutputs(Air.getFluid(10000))
-                .dimensionBlackList(-1)
-                .dimensionBlackList(1)
+                .dimensionBlacklist(-1)
+                .dimensionBlacklist(1)
                 .duration(200).EUt(16).buildAndRegister();
-         */
+
 
         GAS_COLLECTOR_RECIPES.recipeBuilder()
                 .circuitMeta(2)

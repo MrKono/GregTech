@@ -3,7 +3,7 @@ package gregtech.api.recipes.builders;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.recipeproperties.GasCollectorDimensionBlackListProperty;
+import gregtech.api.recipes.recipeproperties.GasCollectorDimensionBlacklistProperty;
 import gregtech.api.recipes.recipeproperties.GasCollectorDimensionProperty;
 
 import crafttweaker.CraftTweakerAPI;
@@ -54,17 +54,17 @@ public class GasCollectorRecipeBuilder extends RecipeBuilder<GasCollectorRecipeB
                     }
             return true;
         }
-        if (key.equals(GasCollectorDimensionBlackListProperty.KEY)) {
+        if (key.equals(GasCollectorDimensionBlacklistProperty.KEY)) {
             if (value instanceof Integer) {
                 this.dimension((Integer) value);
             } else if (value instanceof List && !((List<?>) value).isEmpty() &&
                     ((List<?>) value).get(0) instanceof Integer) {
-                IntList dimensionIDsBlackListed = getDimensionIDsBlackListed();
-                if (dimensionIDsBlackListed == IntLists.EMPTY_LIST) {
-                    dimensionIDsBlackListed = new IntArrayList();
-                    this.applyProperty(GasCollectorDimensionProperty.getInstance(), dimensionIDsBlackListed);
+                IntList dimensionIDsBlacklisted = getDimensionIDsBlacklisted();
+                if (dimensionIDsBlacklisted == IntLists.EMPTY_LIST) {
+                    dimensionIDsBlacklisted = new IntArrayList();
+                    this.applyProperty(GasCollectorDimensionProperty.getInstance(), dimensionIDsBlacklisted);
                 }
-                dimensionIDsBlackListed.addAll((List<Integer>) value);
+                dimensionIDsBlacklisted.addAll((List<Integer>) value);
             } else {
                 if (isCTRecipe) {
                     CraftTweakerAPI.logError("Dimension for Gas Collector needs to be a Integer");
@@ -93,19 +93,19 @@ public class GasCollectorRecipeBuilder extends RecipeBuilder<GasCollectorRecipeB
                         IntLists.EMPTY_LIST);
     }
 
-    public GasCollectorRecipeBuilder dimensionBlackList(int dimensionID) {
-        IntList dimensionIDsBlackListed = getDimensionIDsBlackListed();
-        if (dimensionIDsBlackListed == IntLists.EMPTY_LIST) {
-            dimensionIDsBlackListed = new IntArrayList();
-            this.applyProperty(GasCollectorDimensionBlackListProperty.getInstance(), dimensionIDsBlackListed);
+    public GasCollectorRecipeBuilder dimensionBlacklist(int dimensionID) {
+        IntList dimensionIDsBlacklisted = getDimensionIDsBlacklisted();
+        if (dimensionIDsBlacklisted == IntLists.EMPTY_LIST) {
+            dimensionIDsBlacklisted = new IntArrayList();
+            this.applyProperty(GasCollectorDimensionBlacklistProperty.getInstance(), dimensionIDsBlacklisted);
         }
-        dimensionIDsBlackListed.add(dimensionID);
+        dimensionIDsBlacklisted.add(dimensionID);
         return this;
     }
 
-    public IntList getDimensionIDsBlackListed() {
+    public IntList getDimensionIDsBlacklisted() {
         return this.recipePropertyStorage == null ? IntLists.EMPTY_LIST :
-                this.recipePropertyStorage.getRecipePropertyValue(GasCollectorDimensionBlackListProperty.getInstance(),
+                this.recipePropertyStorage.getRecipePropertyValue(GasCollectorDimensionBlacklistProperty.getInstance(),
                         IntLists.EMPTY_LIST);
     }
 

@@ -8,7 +8,7 @@ import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.recipes.recipeproperties.GasCollectorDimensionBlackListProperty;
+import gregtech.api.recipes.recipeproperties.GasCollectorDimensionBlacklistProperty;
 import gregtech.api.recipes.recipeproperties.GasCollectorDimensionProperty;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
@@ -46,10 +46,8 @@ public class MetaTileEntityGasCollector extends SimpleMachineMetaTileEntity {
                 return true;
             }
         }
-        for (int dimensionBlackList : recipe.getProperty(GasCollectorDimensionBlackListProperty.getInstance(), IntLists.EMPTY_LIST)) {
-            if (dimensionBlackList != this.getWorld().provider.getDimension()) {
-                return true;
-            }
+        for (int dimensionBlackList : recipe.getProperty(GasCollectorDimensionBlacklistProperty.getInstance(), IntLists.EMPTY_LIST)) {
+            return dimensionBlackList != this.getWorld().provider.getDimension();
         }
         return false;
     }

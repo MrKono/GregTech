@@ -5177,6 +5177,7 @@ gregtech.recipe.temperature=温度: %,dK (%s)
 gregtech.recipe.explosive=爆薬: %s
 gregtech.recipe.eu_to_start=開始エネルギー: %sEU
 gregtech.recipe.dimensions=ディメンション: %s
+gregtech.recipe.dimensions.blacklisted=対象外ディメンション: %s
 gregtech.recipe.cleanroom=%sが必要
 gregtech.recipe.cleanroom.display_name=クリーンルーム
 gregtech.recipe.cleanroom_sterile.display_name=滅菌クリーンルーム
