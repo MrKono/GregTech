@@ -96,6 +96,16 @@ public class ChemistryRecipes {
                 .dimension(0)
                 .duration(200).EUt(16).buildAndRegister();
 
+        /*
+        Same Recipe but use blacklist
+        GAS_COLLECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(1)
+                .fluidOutputs(Air.getFluid(10000))
+                .dimensionBlackList(-1)
+                .dimensionBlackList(1)
+                .duration(200).EUt(16).buildAndRegister();
+         */
+
         GAS_COLLECTOR_RECIPES.recipeBuilder()
                 .circuitMeta(2)
                 .fluidOutputs(NetherAir.getFluid(10000))
